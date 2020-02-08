@@ -20,7 +20,8 @@ of the space opera novel trilogy 'The Battle for the Solar System'.
 The game features many missions, with many different objectives and craft.
 
 %prep
-%autosetup -p1
+%setup -qn build
+cd %{name}-%{version}
 
 %build
 %set_build_flags

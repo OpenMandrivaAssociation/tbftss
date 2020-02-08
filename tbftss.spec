@@ -6,8 +6,7 @@ Group:          Games/Shooter
 # Nonfree due to the NC clause on art assets
 License:        GPLv2+ and CC-BY-NC-SA 3.0
 URL:            https://www.battleforthesolarsystem.com/games/pw
-Source0:        https://www.battleforthesolarsystem.com/downloads/%{name}-%{version}.src.tar.gz
-#or mirror:	ttps://github.com/stephenjsweeney/tbftss/
+Source0:        https://github.com/stephenjsweeney/tbftss/archive/v%{version}/%{name}-%{version}.tar.gz
 
 BuildRequires:  pkgconfig(sdl2)
 BuildRequires:  pkgconfig(SDL2_image)
@@ -20,8 +19,7 @@ of the space opera novel trilogy 'The Battle for the Solar System'.
 The game features many missions, with many different objectives and craft.
 
 %prep
-%setup -qn build
-cd %{name}-%{version}
+%autosetup -p1
 
 %build
 %set_build_flags
